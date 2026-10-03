@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Steamworks SDK redistributables.
+# These cannot be committed: Valve's licence forbids redistribution.
+# Download from https://partner.steamgames.com/ and copy redistributable_bin here.
+steamworks_sdk/
+
+# Local environment overrides
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor and OS noise
+.DS_Store
+.vscode/
+.idea/
