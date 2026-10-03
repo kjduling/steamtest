@@ -1,0 +1,26 @@
+{
+  "name": "steamtest",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch server/main.ts",
+    "build": "npm run typecheck && vite build",
+    "preview": "NODE_ENV=production tsx server/main.ts",
+    "start": "NODE_ENV=production tsx server/main.ts",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.server.json && tsc -p tsconfig.scripts.json",
+    "verify": "tsx scripts/verify-server.ts && tsx scripts/verify-host.ts && tsx scripts/verify-discovery.ts && tsx scripts/verify-api.ts && tsx scripts/verify-client.ts",
+    "test": "npm run typecheck && npm run verify"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "steamworks-ffi-node": "^0.11.3"
+  }
+}
